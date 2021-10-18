@@ -16,10 +16,10 @@ public class App {
 	    }
 
 	    public static final Arbre arbre2() {
-	        final Arbre<Double> f1 = new <Double>Feuille(2);
-	        final Arbre <Double>f2 = new <Doouble> Feuille(3);
+	        final Arbre<Double> f1 = new <Double>Feuille(2.0);
+	        final Arbre <Double>f2 = new <Doouble> Feuille(3.0);
 	        final Arbre<Double> n1 = new Noeud<Double>(List.of(f1,f2));
-	        final Arbre<Double> f3 = new<Double> Feuille(1);
+	        final Arbre<Double> f3 = new<Double> Feuille(1.0);
 	        final Arbre<Double>n2 = new Noeud<Double>(List.of(n1,f3));
 	        return n2;
 	    }
@@ -53,8 +53,8 @@ public class App {
 
 	    @Test public void testValeurs() {
 	        final Set<T> contenu = Set.of("a","b","c");
-	        assertEquals(Set.of(), arbre0().valeurs(2.0,1.0));
-	        assertEquals(contenu, arbre1().valeurs());
+	        assertEquals(Set.of(), arbre0().valeurs(2.0,1.0,4.0));
+	        assertEquals(contenu, arbre1().valeurs(2.0,3.0,3.1));
 	        assertEquals(contenu, arbre2().valeurs());
 	        assertEquals(contenu, arbre3().valeurs());
 	    }
